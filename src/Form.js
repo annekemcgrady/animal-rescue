@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { addNewDonation } from './actions/index.js';
+import { createNewDonation } from './apiCalls';
 import './Form.css';
 
 
@@ -13,12 +14,12 @@ class Form extends Component {
 
   handleChange = (e) => {
     this.setState({ [e.target.name] : e.target.value})
-    console.log(this.state)
   }
 
-  createDonation = () => {
+  createDonation = async () => {
     let newDonation = {id: Date.now(), name: this.state.name, donation: parseInt(this.state.donation)}
-    this.props.setNewDonation(newDonation)
+    const donationToAdd = await createNewDonation(newDonation)
+    this.props.setNewDonation(donationToAdd)
     this.clearInputs()
   }
 
