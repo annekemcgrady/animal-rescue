@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { addNewDonation } from './actions/index.js'
+import { addNewDonation } from './actions/index.js';
+import './Form.css';
 
 
 class Form extends Component {
@@ -28,9 +29,10 @@ class Form extends Component {
 
   render = () => {
     return(
-      <form action="submit">
-      <input type="text" name="name" value={this.state.name} />
-      <input type="text" name="donation" value={this.state.donation} />
+      <form action="submit" className="form">
+      <h2>ANIMAL RESCUE</h2>
+      <input placeholder= "Enter name" type="text" name="name" value={this.state.name} onChange={this.handleChange} />
+      <input placeholder= "Enter donation amount" type="text" name="donation" value={this.state.donation} onChange={this.handleChange}/>
       <button type='button' onClick={this.createDonation}>Donate!</button>
       </form>
     )

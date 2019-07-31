@@ -1,5 +1,6 @@
 import React from 'react';
-import DonationCard from './DonationCard.js'
+import DonationCard from './DonationCard.js';
+import './DonationContainer.css'
 import { connect } from 'react-redux';
 
 
@@ -17,7 +18,7 @@ const DonationsContainer = ({donations}) => {
 
 return (
   <div className='donation-card-container'>
-    DONATIONS CONTAINER
+    <p>Recent Donations</p>
     {displayDonationCards}
   </div>
 )

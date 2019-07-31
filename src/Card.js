@@ -5,10 +5,10 @@ import './Card.css'
 const Card = ({ name, img, species, description }) => {
   return (
     <div className="animal-card">
-     <h3>{name}</h3>
+     <h3>Name: {name}</h3>
      <img src={img} alt={species} />
-     <h5>{species}</h5>
-     <p>{description}</p>
+     <h5>Species: {species}</h5>
+     <p>Description: {description}</p>
     </div>
   )
 }
