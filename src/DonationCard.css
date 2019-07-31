@@ -4,6 +4,7 @@
   border: 1px solid darkgreen;
   margin: 5px;
   background-color: lightgreen;
+  box-shadow: 10px 10px 17px -5px rgba(0,0,0,0.75);
 }
 
 .donation-card p {

@@ -1,6 +1,5 @@
-import React from 'react';
-import './DonationCard.css'
-
+import React from "react";
+import "./DonationCard.css";
 
 const DonationCard = ({ name, amount }) => {
   return (
@@ -8,8 +7,7 @@ const DonationCard = ({ name, amount }) => {
       <p>{name}</p>
       <p>${amount}</p>
     </div>
-  )
-}
-
+  );
+};
 
 export default DonationCard;
