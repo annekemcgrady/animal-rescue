@@ -19,7 +19,6 @@ const CardContainer = ({animals}) => {
 
 return (
   <div className='card-container'>
-    CARD CONTAINER COMPONENT
     {displayCards}
   </div>
 )

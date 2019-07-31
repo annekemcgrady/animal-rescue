@@ -11,3 +11,9 @@ export const addError = (errorMsg) => {
     errorMsg
   })
 }
+
+export const updateIsLoading = () => {
+  return ({
+    type: 'UPDATE_ISLOADING'
+  })
+}
