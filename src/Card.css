@@ -1,5 +1,5 @@
 .animal-card {
-  height: 350px;
+  height: 400px;
   width: 350px;
   border: 1px solid black;
   margin: 10px;
@@ -8,6 +8,6 @@
 }
 
 img {
-  height: 80px;
-  width: 80px;
+  height: 180px;
+  width: 98%;
 }
