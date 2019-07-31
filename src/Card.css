@@ -1,0 +1,10 @@
+.animal-card {
+  height: 300px;
+  width: 400px;
+  border: 1px solid black;
+}
+
+img {
+  height: 50px;
+  width: 50px;
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import CardContainer from './CardContainer';
 import { fetchAnimals } from './apiCalls';
 import { addAnimals } from './actions/index.js';
 import { connect } from 'react-redux';
@@ -19,6 +20,7 @@ render =()=> {
   return (
     <div className="App">
       APP COMPONENT
+      <CardContainer />
     </div>
   );
 }
