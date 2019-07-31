@@ -13,12 +13,13 @@ class App extends Component {
 componentDidMount = async ()=> {
   try {
     const animalData = await fetchAnimals()
-    const donationData = await fetchDonations()
     this.props.setAnimals(animalData)
+    const donationData = await fetchDonations()
     this.props.setDonations(donationData)
     this.props.setIsLoading()
   } catch(error) {
     this.props.setError(error.message)
+    this.props.setIsLoading()
   }
 } 
 
@@ -28,9 +29,11 @@ render =()=> {
     <div className="App">
       <Form />
       {this.props.isLoading && <div className="loading">Loading....</div>}
-      {this.props.error && <div className="loading">Sorry we have encountered an error</div>}
-      <DonationsContainer />
-      <CardContainer />
+      {this.props.error && <div className="loading">{this.props.error}</div>}
+      <section className="main">
+        <CardContainer />
+        <DonationsContainer />
+      </section>
     </div>
   );
 }

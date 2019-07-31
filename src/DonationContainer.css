@@ -1,4 +1,13 @@
-.donation-card-container {
+.donations {
   border: 1px solid green;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  width: 540px;
+}
+
+h4 {
+  text-decoration: underline;
+  font-size: 1.2em;
 }

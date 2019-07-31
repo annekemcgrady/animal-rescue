@@ -6,7 +6,7 @@ const DonationCard = ({ name, amount }) => {
   return (
     <div className="donation-card">
       <p>{name}</p>
-      <p>{amount}</p>
+      <p>${amount}</p>
     </div>
   )
 }

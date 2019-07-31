@@ -17,8 +17,8 @@ const DonationsContainer = ({donations}) => {
 
 
 return (
-  <div className='donation-card-container'>
-    <p>Recent Donations</p>
+  <div className='donations'>
+    <h4>Recent Donations</h4>
     {displayDonationCards}
   </div>
 )

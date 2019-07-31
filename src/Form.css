@@ -15,12 +15,15 @@ h2 {
 input {
   height: 40px;
   width: 250px;
+  margin: 5px;
 }
 
 button {
-  height: 40px;
-  width: 150px;
-  color: green;
+  height: 46px;
+  width: 250px;
+  color: white;
   font-size: 1em;
+  background-color: darkgreen;
+  border-radius: 10px;
 
 }
