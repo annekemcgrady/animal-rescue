@@ -3,6 +3,14 @@
   background-color: lightgreen;
 }
 
+h2 {
+  color: darkgreen;
+  font-style: italic;
+}
+
+.form p {
+  font-size: 1em;
+}
 
 input {
   height: 40px;
