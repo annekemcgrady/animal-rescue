@@ -17,14 +17,22 @@ class App extends Component {
     try {
       const animalData = await fetchAnimals();
       this.props.setAnimals(animalData);
-      const donationData = await fetchDonations();
-      this.props.setDonations(donationData);
-      this.props.setIsLoading();
     } catch (error) {
       this.props.setError(error.message);
-      this.props.setIsLoading();
     }
+    this.fetchDonationData()
+    this.props.setIsLoading();
   };
+
+
+  fetchDonationData = async () => {
+    try {
+      const donationData = await fetchDonations();
+      this.props.setDonations(donationData);
+    } catch (error) {
+      this.props.setError(error.message);
+    }
+  }
 
   render = () => {
     return (
