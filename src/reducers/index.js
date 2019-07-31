@@ -1,7 +1,9 @@
-import {animalsReducer } from './animalsReducer.js'
-import {combineReducers} from 'redux';
+import { animalsReducer } from './animalsReducer.js';
+import { errorReducer } from './errorReducer.js'
+import { combineReducers } from 'redux';
 
 
 export const rootReducer = combineReducers({
-  animals: animalsReducer
+  animals: animalsReducer,
+  error: errorReducer
 })

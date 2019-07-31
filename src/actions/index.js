@@ -4,3 +4,10 @@ export const addAnimals = (animals) => {
     animals
   })
 }
+
+export const addError = (errorMsg) => {
+  return ({
+    type: 'ADD_ERROR',
+    errorMsg
+  })
+}
