@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import CardContainer from './CardContainer';
+import Form from './Form.js';
 import { fetchAnimals, fetchDonations} from './apiCalls';
 import { addAnimals, addError, updateIsLoading, addDonations } from './actions/index.js';
 import { connect } from 'react-redux';
@@ -25,6 +26,7 @@ render =()=> {
 
   return (
     <div className="App">
+      <Form />
       {this.props.isLoading && <div className="loading">Loading....</div>}
       {this.props.error && <div className="loading">Sorry we have encountered an error</div>}
       <DonationsContainer />

@@ -25,3 +25,10 @@ export const addDonations = (donations) => {
   })
 }
 
+export const addNewDonation = (newDonation) => {
+  return ({
+    type: 'ADD_NEW_DONATION',
+    newDonation
+  })
+}
+
