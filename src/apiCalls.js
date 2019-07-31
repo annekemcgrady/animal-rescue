@@ -10,3 +10,15 @@ export const fetchAnimals = async () => {
   }
 
 }
+
+export const fetchDonations = async () => {
+
+  try {
+  const result = await fetch('http://localhost:3001/api/v1/donations')
+  return result.json()
+
+  } catch(error) {
+    throw new Error('Error fetching donations')
+  }
+
+}

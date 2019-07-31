@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
 import CardContainer from './CardContainer';
-import { fetchAnimals } from './apiCalls';
-import { addAnimals, addError, updateIsLoading } from './actions/index.js';
+import { fetchAnimals, fetchDonations} from './apiCalls';
+import { addAnimals, addError, updateIsLoading, addDonations } from './actions/index.js';
 import { connect } from 'react-redux';
 
 class App extends Component {
 
 
 componentDidMount = async ()=> {
-try {
-  const animalData = await fetchAnimals()
-console.log(animalData)
-this.props.setAnimals(animalData)
-this.props.setIsLoading()
-} catch(error) {
-  this.props.setError(error.message)
-}
+  try {
+    const animalData = await fetchAnimals()
+    const donationData = await fetchDonations()
+    this.props.setAnimals(animalData)
+    this.props.setDonations(donationData)
+    this.props.setIsLoading()
+  } catch(error) {
+    this.props.setError(error.message)
+  }
 } 
 
 render =()=> {
@@ -39,7 +40,8 @@ const mapStateToProps = (store) => ({
 const mapDispatchToProps =(dispatch) => ({
   setAnimals: animals => dispatch(addAnimals(animals)),
   setError: errorMsg => dispatch(addError(errorMsg)),
-  setIsLoading: () => dispatch(updateIsLoading())
+  setIsLoading: () => dispatch(updateIsLoading()),
+  setDonations: donations => dispatch(addDonations(donations))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

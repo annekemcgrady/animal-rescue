@@ -17,3 +17,11 @@ export const updateIsLoading = () => {
     type: 'UPDATE_ISLOADING'
   })
 }
+
+export const addDonations = (donations) => {
+  return ({
+    type: 'ADD_DONATIONS',
+    donations
+  })
+}
+
