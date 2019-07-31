@@ -4,6 +4,7 @@ import CardContainer from './CardContainer';
 import { fetchAnimals, fetchDonations} from './apiCalls';
 import { addAnimals, addError, updateIsLoading, addDonations } from './actions/index.js';
 import { connect } from 'react-redux';
+import DonationsContainer from './DonationsContainer';
 
 class App extends Component {
 
@@ -26,6 +27,7 @@ render =()=> {
     <div className="App">
       {this.props.isLoading && <div className="loading">Loading....</div>}
       {this.props.error && <div className="loading">Sorry we have encountered an error</div>}
+      <DonationsContainer />
       <CardContainer />
     </div>
   );
